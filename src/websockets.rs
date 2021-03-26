@@ -115,7 +115,7 @@ impl<'a> WebSockets<'a> {
         }
     }
     
-    pub fn public_handle_msg(&mut self, msg: &str) -> Result<()> {
+    pub fn test_handle_msg(&mut self, msg: &str) -> Result<()> {
         self.handle_msg(msg)
     }
 

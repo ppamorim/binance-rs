@@ -7,7 +7,7 @@ use std::sync::atomic::{AtomicBool, Ordering};
 use core::time::Duration;
 
 fn handle_msg(web_socket: &mut WebSockets<'_>, body: &str) {
-    web_socket.public_handle_msg(&body);
+    web_socket.test_handle_msg(&body);
 }
 
 fn criterion_benchmark(c: &mut Criterion) {
