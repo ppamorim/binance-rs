@@ -114,6 +114,10 @@ impl<'a> WebSockets<'a> {
             bail!("Not able to close the connection");
         }
     }
+    
+    pub fn public_handle_msg(&mut self, msg: &str) -> Result<()> {
+        self.handle_msg(msg)
+    }
 
     fn handle_msg(&mut self, msg: &str) -> Result<()> {
         let value: serde_json::Value = serde_json::from_str(msg)?;
@@ -183,4 +187,5 @@ impl<'a> WebSockets<'a> {
         }
         Ok(())
     }
+
 }
