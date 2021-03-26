@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 use crate::account::TimeInForce;
 use crate::account::OrderType;
 use crate::account::OrderSide;
+use crate::util::to_i64;
+use crate::util::to_f64;
 
 #[derive(Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
