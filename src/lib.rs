@@ -9,6 +9,10 @@
 #[macro_use]
 extern crate error_chain;
 
+#[cfg(target_os = "linux")]
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 mod client;
 pub mod errors;
 mod util;
